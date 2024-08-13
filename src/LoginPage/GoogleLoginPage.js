@@ -8,6 +8,8 @@ const GoogleLoginPage = () => {
     const token = response.credential;
     setToken(token);
     console.log("Google Token: ", token);
+    document.cookie = `google_token=${token}; path=/; samesite=strict; secure`;
+
   };
 
   const handleLoginFailure = () => {
