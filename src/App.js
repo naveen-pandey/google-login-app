@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import GoogleLoginPage from './LoginPage/GoogleLoginPage';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GoogleOAuthProvider clientId="805609818673-8tnj0oufbpn834mbi2db3v3pkpr7kecn.apps.googleusercontent.com">
+      <div>
+        <GoogleLoginPage />
+      </div>
+    </GoogleOAuthProvider>
   );
-}
+};
 
 export default App;
+
