@@ -36,3 +36,4 @@ const GoogleLoginPage = () => {
 };
 
 export default GoogleLoginPage;
+
